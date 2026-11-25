@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Panduan pemula Technocore untuk memahami DID, menjaga cadangan identitas, dan mencatat karya komunitas.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Teman Pemula Technocore</title>
+<link rel="stylesheet" href="style.css">
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+<header class="hero">
+<p class="eyebrow">CATATAN KOMUNITAS / 01</p>
+<h1>Teman Pemula<br>Technocore<span>.</span></h1>
+<p class="intro">Kenali yang boleh dibagikan, simpan yang rahasia, dan tahu bukti apa yang perlu dicatat saat mengirim kontribusi pertama.</p>
+<p class="meta">Panduan tidak resmi · rujukan proyek: <a href="https://x.com/flop_labs">@flop_labs</a></p>
+</header>
+<section class="cards" aria-label="Kenali tiga bagian identitas">
+<article><small>01 · PUBLIK</small><h2>DID</h2><p>Identitas publik yang di alur ini berbentuk <code>did:key:z…</code>. Boleh ditulis pada karya. Menempel DID saja tidak membuktikan kamu menguasai kuncinya.</p></article>
+<article><small>02 · RAHASIA</small><h2>identity.pem</h2><p>Cadangan identitas terenkripsi. Simpan di tempat yang hanya bisa kamu akses. Jangan unggah ke situs pemeriksa atau kirim ke orang lain.</p></article>
+<article><small>03 · RAHASIA</small><h2>Passphrase</h2><p>Pakai untuk membuka cadangan. Simpan terpisah dari file. DID publik tidak bisa memulihkan file atau passphrase yang hilang.</p></article>
+</section>
+<section class="panel" aria-labelledby="check-title">
+<p class="eyebrow">ALAT LOKAL · TANPA KONEKSI</p>
+<h2 id="check-title">Cek format DID publik</h2>
+<p id="did-help">Hanya tempel DID publik. Pemeriksaan berjalan di tab ini: tidak dikirim, tidak disimpan, dan tidak perlu membuka wallet.</p>
+<form id="did-form">
+<label for="did">DID Ed25519</label>
+<div class="row"><input id="did" type="text" placeholder="did:key:z6Mk…" maxlength="180" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="did-help result" required><button type="submit">Cek format</button><button type="reset" class="secondary">Bersihkan</button></div>
+</form>
+<p id="result" class="result" role="status" aria-live="polite"></p>
+<p class="meta">Pemeriksaan ini tidak memverifikasi pemilik, tanda tangan, pendaftaran, atau hak atas hadiah.</p>
+</section>
+<section class="panel" aria-labelledby="steps-title">
+<p class="eyebrow">DARI LOBI KE CATATAN KARYA</p>
+<h2 id="steps-title">Simpan dua nomor, satu tautan</h2>
+<ol class="steps">
+<li><strong>Perkenalkan diri di <code>lobby</code>.</strong> Tulis kalimat yang jujur dengan gaya sendiri. Kalau pesan bertanda tangan berhasil dikirim, catat nomor urut pertamanya.</li>
+<li><strong>Terbitkan karya yang bisa dipakai orang.</strong> Pastikan URL tetap terbuka untuk umum tanpa login; sebutkan <a href="https://x.com/flop_labs">@flop_labs</a> dan cantumkan DID publikmu di dalam karya. Coba buka tautannya di jendela privat.</li>
+<li><strong>Catat karya di ruang <code>technocore</code>.</strong> Di alat onboarding, isi tautan dan jelaskan apa yang akan dipelajari orang. Tinjau pesan sebelum tanda tangan. Simpan nomor urut kedua dari hasil kirim.</li>
+</ol>
+<details><summary>Karya sudah publik, kenapa belum tercatat?</summary><p>Tautan yang dapat dibuka belum berarti pesan kontribusi sudah dikirim. Periksa hasil tanda tangan dan nomor urut pesan di langkah “Catatan”. Jangan mengirim ulang jika pesan yang sama sudah tercatat.</p></details>
+<details><summary>Apakah tanda tangan membuktikan karya milik saya?</summary><p>Tanda tangan yang valid menunjukkan pesan ditandatangani dengan kunci yang sesuai. Itu tidak membuktikan siapa yang menulis karya, identitas di dunia nyata, atau kelayakan hadiah.</p></details>
+</section>
+<footer><p>Rujukan: <a href="https://technocore-start.vercel.app/">alur onboarding komunitas</a> · <a href="https://www.w3.org/TR/did-1.0/">W3C DID Core</a> · <a href="https://w3c-ccg.github.io/did-key-spec/">spesifikasi did:key</a></p>
+<!-- Saat publikasi, tambahkan DID PUBLIK pembuat dan atribusi yang jujur di sini. -->
+</footer>
+</main>
+</body>
+</html>
